@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blueish">
+
+
+    <TextView
+        android:id="@+id/tvKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="65dp"
+        android:focusable="auto"
+        android:text="Km"
+        android:textSize="40sp"
+        android:fontFamily="cursive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMeters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="m"
+        android:textSize="40sp"
+        android:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="@+id/tvKm"
+        app:layout_constraintTop_toBottomOf="@id/tvKm" />
+
+    <TextView
+        android:id="@+id/tvCm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="Cm"
+        android:textSize="40sp"
+        android:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="@+id/tvKm"
+        app:layout_constraintTop_toBottomOf="@id/tvMeters" />
+
+    <TextView
+        android:id="@+id/tvFeet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="ft"
+        android:textSize="40sp"
+        android:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="@+id/tvKm"
+        app:layout_constraintTop_toBottomOf="@id/tvCm" />
+
+    <TextView
+        android:id="@+id/tvInch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="in"
+        android:textSize="40sp"
+        android:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="@+id/tvKm"
+        app:layout_constraintTop_toBottomOf="@id/tvFeet" />
+
+    <EditText
+        android:id="@+id/kmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:focusable="true"
+        android:hint="Kilometers"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textColorHint="#7A6A6A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvKm"
+        app:layout_constraintStart_toEndOf="@+id/tvKm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/meterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:focusable="true"
+        android:hint="Meters"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textColorHint="#7A6A6A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMeters"
+        app:layout_constraintStart_toStartOf="@+id/kmText"
+        app:layout_constraintTop_toBottomOf="@+id/kmText" />
+
+    <EditText
+        android:id="@+id/cmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:hint="Centimeters"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textColorHint="#7A6A6A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCm"
+        app:layout_constraintStart_toStartOf="@+id/meterText"
+        app:layout_constraintTop_toBottomOf="@+id/meterText" />
+
+    <EditText
+        android:id="@+id/feetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:focusable="true"
+        android:hint="Feet"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textColorHint="#7A6A6A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFeet"
+        app:layout_constraintStart_toStartOf="@+id/cmText"
+        app:layout_constraintTop_toBottomOf="@+id/cmText" />
+
+    <EditText
+        android:id="@+id/inchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:hint="Inches"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textColorHint="#7A6A6A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInch"
+        app:layout_constraintStart_toStartOf="@+id/feetText"
+        app:layout_constraintTop_toBottomOf="@+id/feetText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="549dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
