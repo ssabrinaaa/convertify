@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
+
+
 private const val kgTog = 1000.0
 private const val lbTog = 453.592
 private const val ozTog = 28.349500000294
@@ -26,29 +28,21 @@ class Mass : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-                val kg = kgText.text.toString().toDouble()
+
                 if (kgText.hasFocus()) {
                     val kg = kgText.text.toString().toDouble()
                     kgText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
-
                         computeFromUnit(kg, kgTog)
 
                     } else {
                         kgText.setText(0.toString())
-                        val km = kgText.text.toString().toDouble()
-
+                        val kg = kgText.text.toString().toDouble()
                         computeFromUnit(kg, kgTog)
                     }
-
                     kgText.requestFocus()
-
-
-
                 }
-
-
             }
         })
 
@@ -56,29 +50,21 @@ class Mass : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-                val g = gText.text.toString().toDouble()
+
                 if (gText.hasFocus()) {
                     val g = gText.text.toString().toDouble()
                     gText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
-
                         computeFromUnit(g, 1.0)
 
                     } else {
                         gText.setText(0.toString())
                         val g = gText.text.toString().toDouble()
-
                         computeFromUnit(g, 1.0)
                     }
-
                     gText.requestFocus()
-
-
-
                 }
-
-
             }
         })
 
@@ -86,29 +72,21 @@ class Mass : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-                val lb = poundText.text.toString().toDouble()
+
                 if (poundText.hasFocus()) {
                     val lb = poundText.text.toString().toDouble()
                     poundText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
-
                         computeFromUnit(lb, lbTog)
 
                     } else {
                         poundText.setText(0.toString())
                         val lb = poundText.text.toString().toDouble()
-
                         computeFromUnit(lb, lbTog)
                     }
-
                     poundText.requestFocus()
-
-
-
                 }
-
-
             }
         })
 
@@ -116,29 +94,21 @@ class Mass : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-                val oz = ozText.text.toString().toDouble()
+
                 if (ozText.hasFocus()) {
                     val oz = ozText.text.toString().toDouble()
                     ozText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
-
                         computeFromUnit(oz, ozTog)
 
                     } else {
                         ozText.setText(0.toString())
                         val oz = ozText.text.toString().toDouble()
-
                         computeFromUnit(oz, ozTog)
                     }
-
                     ozText.requestFocus()
-
-
-
                 }
-
-
             }
         })
     }
@@ -156,17 +126,12 @@ class Mass : AppCompatActivity() {
         val kg = gram * (1/ kgTog)
         val pound = gram * (1 / lbTog)
         val ounce = gram * (1 / ozTog)
-        // handles the auto focusing of the kmText editText field
+
         if (prevKg != kg) {
             kgText.setText(kg.toString())
         }
         gText.setText(gram.toString())
         poundText.setText(pound.toString())
         ozText.setText(ounce.toString())
-
-
-
-
     }
-
 }
