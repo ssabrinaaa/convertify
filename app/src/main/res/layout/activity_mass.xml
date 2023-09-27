@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:outlineProvider="bounds"
+    android:background="@color/blueish"
+    tools:context=".Mass">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/massbg"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/grams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:fontFamily="cursive"
+        android:text="g"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/kg"
+        app:layout_constraintTop_toBottomOf="@+id/kg" />
+
+    <TextView
+        android:id="@+id/pound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:fontFamily="cursive"
+        android:text="lb"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/grams"
+        app:layout_constraintTop_toBottomOf="@+id/grams" />
+
+    <TextView
+        android:id="@+id/kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="cursive"
+        android:text="Kg"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:fontFamily="cursive"
+        android:text="Oz"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/pound"
+        app:layout_constraintTop_toBottomOf="@+id/pound" />
+
+    <EditText
+        android:id="@+id/kgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/kg"
+        app:layout_constraintStart_toEndOf="@+id/kg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/poundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:singleLine="true"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pound"
+        app:layout_constraintEnd_toEndOf="@+id/gramText"
+        app:layout_constraintStart_toStartOf="@+id/gramText"
+        app:layout_constraintTop_toBottomOf="@+id/gramText" />
+
+    <EditText
+        android:id="@+id/ounceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ounce"
+        app:layout_constraintEnd_toEndOf="@+id/poundText"
+        app:layout_constraintStart_toStartOf="@+id/poundText"
+        app:layout_constraintTop_toBottomOf="@+id/poundText" />
+
+    <EditText
+        android:id="@+id/gramText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/grams"
+        app:layout_constraintEnd_toEndOf="@+id/kgText"
+        app:layout_constraintStart_toStartOf="@+id/kgText"
+        app:layout_constraintTop_toBottomOf="@+id/kgText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

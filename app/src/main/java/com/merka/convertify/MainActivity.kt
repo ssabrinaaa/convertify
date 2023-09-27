@@ -6,14 +6,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 
-private const val TAG= "MainActivity"
-private const val kmToMeter = 1000.0
+
 private const val kmToCm = 100000.0
-private const val kmToInch = 39370.1
-private const val kmToFeet = 3280.84
 private const val meterToCm = 100.0
-private const val meterToInch =39.37
-private const val meterToFeet = 3.28
 private const val cmToInch = 0.39
 private const val cmToFeet = 0.033
 private const val feetTocm = 30.48

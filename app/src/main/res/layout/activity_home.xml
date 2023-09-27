@@ -3,54 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Home">
 
-    <TextView
-        android:id="@+id/lengthText"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="150dp"
-        android:elegantTextHeight="true"
-        android:fontFamily="@font/asset"
-        android:onClick="openMainActivity"
-        android:text="Length"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/massText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="236dp"
-        android:fontFamily="@font/asset"
-        android:text="Mass"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="@+id/lengthText"
-        app:layout_constraintTop_toBottomOf="@+id/lengthText" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/homebg"
+        android:scaleType="centerCrop" />
 
     <Button
         android:id="@+id/lengthButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        android:width="1000dp"
+        android:height="75dp"
         android:text="Length"
+        android:textSize="34sp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/lengthText"
-        app:layout_constraintStart_toEndOf="@+id/lengthText" />
+        app:layout_constraintBottom_toTopOf="@+id/massButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/massButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="50dp"
+        android:width="1000dp"
+        android:height="75dp"
         android:text="Mass"
-        app:layout_constraintBottom_toBottomOf="@+id/massText"
-        app:layout_constraintStart_toEndOf="@+id/massText"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/lengthButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lengthButton"
         app:layout_constraintTop_toBottomOf="@+id/lengthButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

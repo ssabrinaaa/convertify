@@ -23,7 +23,20 @@ class Home : AppCompatActivity() {
 
         })
 
+        massButton = findViewById(R.id.massButton)
 
+        massButton.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                openMassActivity()
+            }
+        })
+
+
+    }
+
+    private fun openMassActivity() {
+        val intent = Intent(this, Mass::class.java)
+        startActivity(intent)
     }
 
     private fun openMainActivity() {
