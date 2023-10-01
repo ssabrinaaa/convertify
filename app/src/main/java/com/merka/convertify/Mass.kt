@@ -6,17 +6,18 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 
-
 private const val kgTog = 1000.0
 private const val lbTog = 453.592
 private const val ozTog = 28.349500000294
 
 class Mass : AppCompatActivity() {
+
     private lateinit var kgText: EditText
     private lateinit var gText: EditText
     private lateinit var poundText: EditText
     private lateinit var ozText: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mass)
         kgText = findViewById(R.id.kgText)
@@ -24,7 +25,8 @@ class Mass : AppCompatActivity() {
         poundText = findViewById(R.id.poundText)
         ozText = findViewById(R.id.ounceText)
 
-        kgText.addTextChangedListener(object: TextWatcher {
+        kgText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -46,7 +48,8 @@ class Mass : AppCompatActivity() {
             }
         })
 
-        gText.addTextChangedListener(object: TextWatcher {
+        gText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -68,7 +71,8 @@ class Mass : AppCompatActivity() {
             }
         })
 
-        poundText.addTextChangedListener(object: TextWatcher {
+        poundText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -90,7 +94,8 @@ class Mass : AppCompatActivity() {
             }
         })
 
-        ozText.addTextChangedListener(object: TextWatcher {
+        ozText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -112,7 +117,9 @@ class Mass : AppCompatActivity() {
             }
         })
     }
+
     private fun getText(): Array<Double> {
+
         val gram = gText.text.toString().toDouble()
         val kg = kgText.text.toString().toDouble()
         val pound = poundText.text.toString().toDouble()
@@ -120,16 +127,19 @@ class Mass : AppCompatActivity() {
 
         return arrayOf(kg, gram, pound, ounce)
     }
-    private fun computeFromUnit(value :Double, factor : Double) {
+
+    private fun computeFromUnit(value: Double, factor: Double) {
+
         val gram = value * factor
-        val (prevKg, prevGram, prevPound, prevOunce) = getText()
-        val kg = gram * (1/ kgTog)
+        val (prevKg, _, _, _) = getText()
+        val kg = gram * (1 / kgTog)
         val pound = gram * (1 / lbTog)
         val ounce = gram * (1 / ozTog)
 
         if (prevKg != kg) {
             kgText.setText(kg.toString())
         }
+
         gText.setText(gram.toString())
         poundText.setText(pound.toString())
         ozText.setText(ounce.toString())

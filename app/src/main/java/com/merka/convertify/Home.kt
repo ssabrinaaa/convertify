@@ -27,12 +27,14 @@ class Home : AppCompatActivity() {
             }
         })
     }
+
     private fun openMassActivity() {
         val intent = Intent(this, Mass::class.java)
         startActivity(intent)
     }
+
     private fun openMainActivity() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, Length::class.java)
         startActivity(intent)
     }
 }

@@ -9,11 +9,10 @@ import android.widget.EditText
 
 private const val kmToCm = 100000.0
 private const val meterToCm = 100.0
-private const val cmToInch = 0.39
-private const val cmToFeet = 0.033
 private const val feetTocm = 30.48
 private const val inchToCm = 2.54
-class MainActivity : AppCompatActivity() {
+
+class Length : AppCompatActivity() {
     private lateinit var kmText: EditText
     private lateinit var meterText: EditText
     private lateinit var cmText: EditText
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inchText: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_length)
         kmText = findViewById(R.id.kmText)
         meterText = findViewById(R.id.meterText)
         cmText = findViewById(R.id.cmText)
@@ -144,6 +143,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
     private fun getText(): Array<Double> {
         val meter = meterText.text.toString().toDouble()
         val km = kmText.text.toString().toDouble()
@@ -152,13 +152,14 @@ class MainActivity : AppCompatActivity() {
         val feet = feetText.text.toString().toDouble()
         return arrayOf(km, meter, cm, inch, feet)
     }
+
     private fun computeFromUnit(value: Double, factor: Double) {
         val cm = value * factor
-        val (prevKm, prevMeter, prevCm, prevInch, prevFeet) = getText()
+        val (prevKm, _, _, _, _) = getText()
         val km = cm * (1 / kmToCm)
         val meter = cm * (1 / meterToCm)
         val inch = cm * (1 / inchToCm)
-        val feet = cm * ( 1 / feetTocm)
+        val feet = cm * (1 / feetTocm)
 
         if (prevKm != km) {
             kmText.setText(km.toString())
