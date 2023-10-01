@@ -12,14 +12,12 @@ private const val feetTocm = 30.48
 private const val inchToCm = 2.54
 
 class Length : AppCompatActivity() {
-
     private lateinit var kmText: EditText
     private lateinit var meterText: EditText
     private lateinit var cmText: EditText
     private lateinit var feetText: EditText
     private lateinit var inchText: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_length)
         kmText = findViewById(R.id.kmText)
@@ -29,18 +27,15 @@ class Length : AppCompatActivity() {
         inchText = findViewById(R.id.inchText)
 
         kmText.addTextChangedListener(object : TextWatcher {
-
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-
                 if (kmText.hasFocus()) {
                     val km = kmText.text.toString().toDouble()
                     kmText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
                         computeFromUnit(km, kmToCm)
-
                     } else {
                         kmText.setText(0.toString())
                         val km = kmText.text.toString().toDouble()
@@ -53,18 +48,15 @@ class Length : AppCompatActivity() {
         })
 
         meterText.addTextChangedListener(object : TextWatcher {
-
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-
                 if (meterText.hasFocus()) {
                     val meter = meterText.text.toString().toDouble()
                     meterText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
                         computeFromUnit(meter, meterToCm)
-
                     } else {
                         meterText.setText(0.toString())
                         val meter = meterText.text.toString().toDouble()
@@ -77,23 +69,19 @@ class Length : AppCompatActivity() {
         })
 
         cmText.addTextChangedListener(object : TextWatcher {
-
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-
                 if (cmText.hasFocus()) {
                     val cm = cmText.text.toString().toDouble()
                     cmText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
                         computeFromUnit(cm, 1.0)
-
                     } else {
                         cmText.setText(0.toString())
                         val cm = cmText.text.toString().toDouble()
                         computeFromUnit(cm, 1.0)
-
                     }
                     cmText.requestFocus()
                 }
@@ -101,24 +89,20 @@ class Length : AppCompatActivity() {
         })
 
         feetText.addTextChangedListener(object : TextWatcher {
-
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
             override fun afterTextChanged(p0: Editable?) {
-
                 if (feetText.hasFocus()) {
                     val feet = feetText.text.toString().toDouble()
                     feetText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
                         computeFromUnit(feet, feetTocm)
-
                     } else {
                         feetText.setText(0.toString())
                         val feet = feetText.text.toString().toDouble()
                         computeFromUnit(feet, feetTocm)
-
                     }
                     feetText.requestFocus()
                 }
@@ -126,19 +110,16 @@ class Length : AppCompatActivity() {
         })
 
         inchText.addTextChangedListener(object : TextWatcher {
-
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
             override fun afterTextChanged(p0: Editable?) {
-
                 if (inchText.hasFocus()) {
                     val inch = inchText.text.toString().toDouble()
                     inchText.clearFocus()
 
                     if (!p0.isNullOrEmpty()) {
                         computeFromUnit(inch, inchToCm)
-
                     } else {
                         inchText.setText(0.toString())
                         val inch = inchText.text.toString().toDouble()
@@ -151,7 +132,6 @@ class Length : AppCompatActivity() {
     }
 
     private fun getText(): Array<Double> {
-
         val meter = meterText.text.toString().toDouble()
         val km = kmText.text.toString().toDouble()
         val cm = cmText.text.toString().toDouble()
@@ -162,7 +142,6 @@ class Length : AppCompatActivity() {
     }
 
     private fun computeFromUnit(value: Double, factor: Double) {
-
         val cm = value * factor
         val (prevKm, _, _, _, _) = getText()
         val km = cm * (1 / kmToCm)
@@ -179,4 +158,3 @@ class Length : AppCompatActivity() {
         feetText.setText(feet.toString())
     }
 }
-

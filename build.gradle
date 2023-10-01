@@ -14,6 +14,6 @@ ktlint {
     reporters {
         reporter "plain"
         reporter "checkstyle"
-        reporter"sarif"
+        reporter "sarif"
     }
 }
