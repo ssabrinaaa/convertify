@@ -15,6 +15,7 @@ class Mass : AppCompatActivity() {
     private lateinit var gText: EditText
     private lateinit var poundText: EditText
     private lateinit var ozText: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mass)

@@ -17,6 +17,7 @@ class Length : AppCompatActivity() {
     private lateinit var cmText: EditText
     private lateinit var feetText: EditText
     private lateinit var inchText: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_length)
@@ -91,7 +92,6 @@ class Length : AppCompatActivity() {
         feetText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-
             override fun afterTextChanged(p0: Editable?) {
                 if (feetText.hasFocus()) {
                     val feet = feetText.text.toString().toDouble()
@@ -112,7 +112,6 @@ class Length : AppCompatActivity() {
         inchText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-
             override fun afterTextChanged(p0: Editable?) {
                 if (inchText.hasFocus()) {
                     val inch = inchText.text.toString().toDouble()
