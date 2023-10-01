@@ -22,7 +22,7 @@ The app has the following features:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXo2eTh1YWY0anF1ZGRoZGVvaXZydnAxeW44bmI2MnN3cGhydW5uaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pQ8qzeNrFHvG6KAmfK/giphy.gif' title='Video Demo' width='' alt='Video Demo' />
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWFpZGdtb3p3bnV6dnY5ZGpjaG93Y3M2MG16M2RoN2tub2t1dW5uNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GHU7CsyrwxjTTtunGU/giphy.gif' title='Video Demo' width='' alt='Video Demo' />
 
 GIF created with **Screen to Gif**
 
