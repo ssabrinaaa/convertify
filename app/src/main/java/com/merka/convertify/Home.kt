@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 class Home : AppCompatActivity() {
     private lateinit var massButton: Button
     private lateinit var lengthButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
