@@ -26,18 +26,6 @@ Here's a video / GIF that demos all of the app's implemented features:
 
 GIF created with **Screen to Gif**
 
-
-## Skills
-
-In this project, I was able to showcase these skills:
-
-- Kotlin Programming: Proficiency in developing mobile applications using Kotlin
-- UI Design: The creation of a user-friendly and intuitive interface demonstrates skills in designing mobile app layouts for optimal user experience.
-- Unit Conversion Logic: Developing algorithms for unit conversions illustrates mathematical and logical problem-solving capabilities.
-- Testing and Debugging: Rigorous testing and debugging processes reveal attention to detail and commitment to delivering a bug-free application.
-- Version Control: Using version control systems like Git and GitHub for project management and collaboration.
-
-
 ## License
 
 Copyright **2023** **Akrem Ahmed**
