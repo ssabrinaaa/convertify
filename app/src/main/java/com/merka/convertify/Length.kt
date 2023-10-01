@@ -157,8 +157,8 @@ class MainActivity : AppCompatActivity() {
         val (prevKm, prevMeter, prevCm, prevInch, prevFeet) = getText()
         val km = cm * (1 / kmToCm)
         val meter = cm * (1 / meterToCm)
-        val inch = cm * cmToInch
-        val feet = (cm * cmToFeet)
+        val inch = cm * (1 / inchToCm)
+        val feet = cm * ( 1 / feetTocm)
 
         if (prevKm != km) {
             kmText.setText(km.toString())
