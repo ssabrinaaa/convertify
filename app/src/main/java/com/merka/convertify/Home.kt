@@ -7,14 +7,16 @@ import android.view.View
 import android.widget.Button
 
 class Home : AppCompatActivity() {
+
     private lateinit var massButton: Button
     private lateinit var lengthButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
         lengthButton = findViewById(R.id.lengthButton)
         lengthButton.setOnClickListener(object : View.OnClickListener {
+
             override fun onClick(p0: View?) {
                 openMainActivity()
             }
@@ -22,6 +24,7 @@ class Home : AppCompatActivity() {
 
         massButton = findViewById(R.id.massButton)
         massButton.setOnClickListener(object : View.OnClickListener {
+
             override fun onClick(p0: View?) {
                 openMassActivity()
             }
@@ -29,6 +32,7 @@ class Home : AppCompatActivity() {
     }
 
     private fun openMassActivity() {
+
         val intent = Intent(this, Mass::class.java)
         startActivity(intent)
     }

@@ -1,11 +1,10 @@
 package com.merka.convertify
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
-
+import androidx.appcompat.app.AppCompatActivity
 
 private const val kmToCm = 100000.0
 private const val meterToCm = 100.0
@@ -13,12 +12,14 @@ private const val feetTocm = 30.48
 private const val inchToCm = 2.54
 
 class Length : AppCompatActivity() {
+
     private lateinit var kmText: EditText
     private lateinit var meterText: EditText
     private lateinit var cmText: EditText
     private lateinit var feetText: EditText
     private lateinit var inchText: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_length)
         kmText = findViewById(R.id.kmText)
@@ -28,6 +29,7 @@ class Length : AppCompatActivity() {
         inchText = findViewById(R.id.inchText)
 
         kmText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -51,6 +53,7 @@ class Length : AppCompatActivity() {
         })
 
         meterText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -74,6 +77,7 @@ class Length : AppCompatActivity() {
         })
 
         cmText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -97,6 +101,7 @@ class Length : AppCompatActivity() {
         })
 
         feetText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
@@ -121,6 +126,7 @@ class Length : AppCompatActivity() {
         })
 
         inchText.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
@@ -145,15 +151,18 @@ class Length : AppCompatActivity() {
     }
 
     private fun getText(): Array<Double> {
+
         val meter = meterText.text.toString().toDouble()
         val km = kmText.text.toString().toDouble()
         val cm = cmText.text.toString().toDouble()
         val inch = inchText.text.toString().toDouble()
         val feet = feetText.text.toString().toDouble()
+
         return arrayOf(km, meter, cm, inch, feet)
     }
 
     private fun computeFromUnit(value: Double, factor: Double) {
+
         val cm = value * factor
         val (prevKm, _, _, _, _) = getText()
         val km = cm * (1 / kmToCm)
