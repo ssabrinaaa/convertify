@@ -1,6 +1,6 @@
 # convertify
 
-Designed by : **Akrem Ahmed**
+Designed by : **Sabrina Mohammed**
 
 
 ## Summary
